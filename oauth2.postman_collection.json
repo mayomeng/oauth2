@@ -1,0 +1,292 @@
+{
+	"id": "eb27f80a-8fae-eb7f-14d3-bfef5ae301ff",
+	"name": "oauth2",
+	"description": "",
+	"order": [
+		"fe0718da-b97c-51d4-f99e-3da27fcaf0a0",
+		"214e7fe5-0bc5-f90b-6f02-8fe34d853db7",
+		"5de3ea56-3a4f-8538-40dd-8d4648fc3922",
+		"5f2104fa-732e-a3ed-2a5d-44b934ab772e",
+		"7848cec1-636f-e209-608c-38702391c4ca"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1511331624719,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "214e7fe5-0bc5-f90b-6f02-8fe34d853db7",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/oauth/token",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "eb27f80a-8fae-eb7f-14d3-bfef5ae301ff",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "client_credentials",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "scope",
+					"value": "select",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "client_1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "client get token",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1511331662604,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "5de3ea56-3a4f-8538-40dd-8d4648fc3922",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/oauth/token",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "eb27f80a-8fae-eb7f-14d3-bfef5ae301ff",
+			"data": [
+				{
+					"key": "username",
+					"value": "user_1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "scope",
+					"value": "select",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "client_2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "password get token",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1511331677444,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "5f2104fa-732e-a3ed-2a5d-44b934ab772e",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/oauth/token",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "eb27f80a-8fae-eb7f-14d3-bfef5ae301ff",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "refresh_token",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "refresh_token",
+					"value": "5e0fdc01-75ad-4381-89c9-9b52de935a3c",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "client_2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "refresh token",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1511331695261,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7848cec1-636f-e209-608c-38702391c4ca",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8081/order/1?access_token=719c33c2-37bf-47a9-a8ee-18f8a34c4b75",
+			"queryParams": [
+				{
+					"key": "access_token",
+					"value": "719c33c2-37bf-47a9-a8ee-18f8a34c4b75",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eb27f80a-8fae-eb7f-14d3-bfef5ae301ff",
+			"data": null,
+			"dataMode": "params",
+			"name": "request resource",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1511331707740,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "fe0718da-b97c-51d4-f99e-3da27fcaf0a0",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nAuthorization: Bearer 122e10dd-79cf-4312-a09b-a52e942eeb2a\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer 122e10dd-79cf-4312-a09b-a52e942eeb2a",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/logout",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eb27f80a-8fae-eb7f-14d3-bfef5ae301ff",
+			"data": [
+				{
+					"key": "username",
+					"value": "user_1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "logout",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1511331643668,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
