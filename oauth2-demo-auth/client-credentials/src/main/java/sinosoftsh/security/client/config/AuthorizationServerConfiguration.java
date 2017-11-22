@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -22,6 +23,8 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     private static final String DEMO_RESOURCE_ID = "order";
 
+    @Autowired
+    UserDetailsService userDetailsService;
     @Autowired
     AuthenticationManager authenticationManager;
     @Autowired
@@ -49,7 +52,8 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.tokenStore(getTokenStore())
-                .authenticationManager(authenticationManager);
+            .authenticationManager(authenticationManager)
+            .userDetailsService(userDetailsService);
     }
 
     @Override
