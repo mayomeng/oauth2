@@ -22,17 +22,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected UserDetailsService userDetailsService(){
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withUsername("user_1").password("123456").authorities("USER").build());
-        manager.createUser(User.withUsername("user_2").password("123456").authorities("USER").build());
+        manager.createUser(User.withUsername("user_1").password("123456").authorities("USER", "ACTUATOR").build());
+        manager.createUser(User.withUsername("user_2").password("123456").authorities("USER", "ACTUATOR").build());
         return manager;
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // @formatter:off
-        http
-            .requestMatchers().anyRequest()
+        http.requestMatchers().anyRequest()
             .and()
+                .cors()
+                .and()
                 .formLogin().loginProcessingUrl("/login")
                 .and()
                 .logout().logoutUrl("/logout")
